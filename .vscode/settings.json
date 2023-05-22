@@ -1,0 +1,9 @@
+{
+    "material-icon-theme.folders.associations": {
+        "components": "vue",
+    },
+    "material-icon-theme.files.associations": {
+        "*.js": "vue",
+        "script.js": "javascript",
+    }
+}

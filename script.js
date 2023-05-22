@@ -14,16 +14,20 @@ function toggleTheme() {
         body.dataset.bsTheme = 'light'
     }
 }
-const navTabs = document.querySelectorAll('.nav-tabs > * > .nav-link')
-navTabs.forEach(e => {
-    e.addEventListener('click', (event) => {
-        document.querySelector('.active').classList.remove('active')
-        document.querySelector('.card:not(.hide)').classList.add('hide')
-        const btn = event.target
-        btn.classList.add('active')
-        const target = document.querySelector(btn.dataset.target)
-        target.classList.remove('hide')
-        // console.log(self.target.dataset.target)
-    })
-})
+// const navTabs = document.querySelectorAll('.nav-tabs > * > .nav-link')
+// navTabs.forEach(e => {
+//     e.addEventListener('click', (event) => {
+//         document.querySelector('.active').classList.remove('active')
+//         document.querySelector('.card:not(.hide)').classList.add('hide')
+//         const btn = event.target
+//         btn.classList.add('active')
+//         const target = document.querySelector(btn.dataset.target)
+//         target.classList.remove('hide')
+//         // console.log(self.target.dataset.target)
+//     })
+// })
 // window.addEventListener("load",main);
+function moveto(self, target) {
+    document.querySelector(`[data-my-item="${self}"]`).classList.remove('active')
+    document.querySelector(`[data-my-item="${target}"]`).classList.add('active')
+}
