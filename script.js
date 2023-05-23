@@ -1,3 +1,13 @@
+/**
+ * @param {String} q 
+ * @returns Element | NodeListOf<Element> | null
+ */
+function $(q="") {
+    const res = document.querySelectorAll(q)
+    if (res.length === 0) { return null } 
+    else if (res.length === 1) { return res[0] } 
+    else { return res }
+}
 // window.addEventListener('load',()=>{
     // const btn = document.querySelector('#btn')
     // btn.addEventListener('click',function() { alert('este es el onclick') })
@@ -27,7 +37,3 @@ function toggleTheme() {
 //     })
 // })
 // window.addEventListener("load",main);
-function moveto(self, target) {
-    document.querySelector(`[data-my-item="${self}"]`).classList.remove('active')
-    document.querySelector(`[data-my-item="${target}"]`).classList.add('active')
-}

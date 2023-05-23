@@ -14,6 +14,12 @@ const navbar = Vue.createApp({
                     <li class="nav-item">
                         <a type="button" class="nav-link" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 2">Last</a>
                     </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 1">Second</a>
+                    </li>
+                    <li class="nav-item">
+                        <a type="button" class="nav-link" data-bs-target="#carouselExample" data-bs-slide-to="0" aria-label="Slide 0">First</a>
+                    </li>
                 </ul>
                 <button style="color: yellow;" class="btn btn-outline-primary nav-icon"><i class="bi bi-sun-fill"></i></button>
                 <span class="nav-space"></span>
