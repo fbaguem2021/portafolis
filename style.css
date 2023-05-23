@@ -1,6 +1,12 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-@import url("./style-test.css");
+@import url("./styles/style-test.css");
+@import url("./styles/carousel.css");
+@import url("./styles/medias.css");
+
+:root {
+    --header-size: 94px;
+}
 
 body[data-bs-theme="dark"] {
     --my-filter: invert(1) grayscale(100);
@@ -12,10 +18,17 @@ html, body {
     height: 100%;
 }
 header {
-    height: 56px;
+    height: var(--header-size);
+}
+nav {
+    z-index: 10;
+}
+
+.logo-fran {
+    background-image: url("./fb-logo2.svg");
 }
 .carousel {
-    height: calc(100% - 56px)
+    height: calc(100% - var(--header-size))
 }
 .full-h {
     height: 100%;
@@ -27,46 +40,17 @@ header {
 } */
 .nav-links {
     padding-right: 25px;
+    flex-direction: row-reverse;
 }
-.nav-links, .nav-space {
+.nav-space {
     width: calc( 100%/2 - 21px )
 }
 .hide {
-    display: none;
+    display: none !important;
 }
 .hide-all {
     display: none !important;
 }
 .card.show {
     display: flex;
-}
-.carousel-inner, .carousel-item {
-    height: 100%;
-}
-.carousel-item.active {
-    display: flex;
-}
-.carousel-item > .d-flex {
-    height: 100%;
-}
-.carousel-item > .carousel-item-content,
-.carousel-item > .d-flex > .carousel-item-content {
-    width: 100% !important;
-    align-self: center !important;
-}
-.custom-carousel-prev-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='currentColor' %3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z' /%3e%3c/svg%3e");
-}
-.custom-carousel-next-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='32' height='32' fill='currentColor' %3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z' /%3e%3c/svg%3e");
-}
-.custom-carousel-prev-icon,
-.custom-carousel-next-icon {
-    filter: var(--my-filter);
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 100% 100%;
 }
