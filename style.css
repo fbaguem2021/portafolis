@@ -5,7 +5,7 @@
 @import url("./styles/medias.css");
 
 :root {
-    --header-size: 94px;
+    --header-size: 102px;
 }
 
 body[data-bs-theme="dark"] {

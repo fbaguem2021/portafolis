@@ -37,10 +37,10 @@
         opacity: 0;
         overflow: hidden;
         transition: height .5s linear, opacity .5s linear;
-        transition-delay: 0s, .5s;
+        /* transition-delay: 0s, .5s; */
     }
-    .navbar-animated > .nav-links-container::after {
+    /* .navbar-animated > .nav-links-container::before {
         height: 40px;
         opacity: 1;
-    }
+    } */
 }

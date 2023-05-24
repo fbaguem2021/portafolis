@@ -5,68 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolis</title>
-    <link rel="shortcut icon" href="./fb-logo2.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./media/fb-logo2.svg" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./script.js" defer></script>
+
+    <script src="./components/NavBar.js"></script>
 </head>
-<body data-bs-theme="dark">
+<body data-bs-theme="dark" onload="resizeNav()">
     <!-- <button id="btntheme" onclick="toggleTheme()">Toggle Theme</button> -->
     <header>
         <nav-bar></nav-bar>
     </header>
 
-    <div style="width: fit-content; color: yellow !important;">
-        <!-- <img src="./fb-logo2.svg" alt="" style="color:red;"> -->
-        
-        <!-- <i class="logo-fran"></i> -->
-    </div>
-
-<!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<!-- <svg width="210mm" height="297mm" viewBox="0 0 210 297" version="1.1" id="svg687" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)" sodipodi:docname="fb-logo.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview id="namedview689" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" showgrid="false" inkscape:zoom="2.1089995" inkscape:cx="295.40073" inkscape:cy="223.56572" inkscape:window-width="1350" inkscape:window-height="1040" inkscape:window-x="294" inkscape:window-y="59" inkscape:window-maximized="0" inkscape:current-layer="layer1" /> 
-  <defs id="defs684" />
-  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
-    <path d="m 80.518152,51.932193 c -2.525331,0.8875 -5.050662,2.77073 -5.050662,3.744814 0,0.692683 0.586237,0.865853 1.195023,0.346342 0.270571,-0.23811 0.721523,-0.562805 1.014641,-0.692682 0.270572,-0.129879 0.496048,-0.432927 0.496048,-0.649391 0,-1.320425 4.689901,-3.052131 6.85447,-2.532619 0.338214,0.08658 0.721523,0.389633 0.856808,0.671036 0.38331,0.82256 -0.586237,1.88323 -2.638068,2.814022 -1.69107,0.779268 -1.984189,1.125609 -1.375404,1.601828 0.248024,0.216463 0.541142,0.216463 1.217571,0 1.12738,-0.324695 1.916545,-0.129878 2.277307,0.541158 0.901904,1.601828 -2.142022,4.41585 -5.231043,4.805484 -1.172475,0.151525 -1.533237,-0.151524 -0.924452,-0.800914 0.518595,-0.541158 2.16457,-1.428657 3.269403,-1.753352 1.037189,-0.281402 1.037189,-0.735975 0.02255,-0.692683 -1.645975,0.08659 -4.329139,1.926523 -4.329139,2.965547 0,0.692682 1.172475,1.666767 2.006736,1.666767 1.803808,0 4.960472,-1.688413 6.042757,-3.225302 0.924451,-1.320426 0.450954,-3.636583 -0.811714,-4.026217 -0.473499,-0.129878 -0.653881,-0.541158 -0.248024,-0.541158 0.405857,0 1.758712,-1.320425 1.984189,-1.926523 0.338216,-0.887499 -0.225477,-1.839938 -1.397951,-2.402742 -1.307761,-0.606097 -3.427235,-0.562804 -5.231043,0.08658 z" id="path232" style="stroke-width:0.0220924" />
-    <path d="m 80.811271,53.620607 c -0.879357,1.103962 -2.119474,3.225302 -2.638069,4.502435 -0.38331,0.909146 -0.428404,1.277133 -0.248024,1.666767 0.293119,0.627744 0.856809,0.64939 1.059738,0 0.360761,-1.125608 1.803807,-3.744814 2.728259,-4.957008 1.014642,-1.320426 1.037189,-1.515243 0.135286,-1.774999 -0.38331,-0.108231 -0.608785,0 -1.03719,0.562805 z"
-       id="path242" style="stroke-width:0.0220924" />
-    <path d="m 78.259264,50.506453 c -1.520744,-0.139879 -3.646129,-0.476949 -4.746213,-0.732766 -1.562796,-0.421176 -2.127924,-0.442875 -2.719843,-0.111052 -0.661605,0.368784 -1.015976,0.306728 -2.233729,-0.440329 -1.825778,-1.085321 -2.0089,-1.363222 -1.466663,-2.293746 0.509514,-0.823873 0.29706,-0.854053 4.852857,0.765531 1.809145,0.624242 4.066156,1.147388 5.007497,1.326423 4.955075,1.229849 5.253174,-0.196862 6.796471,-0.586846 1.192315,-0.310969 1.276415,0.251623 0.105243,1.444278 -0.894062,0.974272 -1.105671,0.979357 -5.595676,0.628557 z" id="path292-4-6" style="stroke-width:0.0352778" sodipodi:nodetypes="cccccccccc" />
-    <path d="m 69.897573,59.553622 c -0.266317,-1.169595 -0.122258,-3.764818 1.049139,-7.006043 0.38183,-1.088396 1.029634,-3.035972 1.427617,-4.349674 0.570101,-2.019432 0.578456,-2.444152 0.01838,-2.721821 -0.380715,-0.159859 -1.251595,-0.724946 -1.970971,-1.24603 -1.028236,-0.758644 -1.318973,-1.17169 -1.457687,-2.164812 -0.263742,-1.637324 0.552559,-2.4681 2.329132,-2.362825 1.750676,0.08133 2.78476,0.989528 3.59242,3.129832 0,0 0.238415,1.18237 0.72053,1.330758 0.519585,0.159921 1.842263,0.366448 1.842263,0.366448 3.904067,0.246759 6.309003,-0.730242 6.638191,1.303951 0.269589,1.786883 -0.821251,0.07903 -1.703837,-0.04439 -0.906535,-0.126756 -1.984544,-0.494816 -4.54971,-0.15241 -1.22866,0.14774 -2.246598,0.347922 -2.366354,0.477427 -0.119758,0.1295 -0.575239,1.336368 -0.825616,2.59437 -0.276263,1.234053 -1.02824,3.709949 -1.657942,5.48207 -1.14744,3.215327 -1.478584,5.599878 -0.831063,6.198662 0.440313,0.407173 0.488218,0.355369 1.084217,-1.64011 0.178439,-0.545293 0.805007,-1.632933 1.041308,-1.32326 0.707042,0.77734 0.502925,1.143613 0.322767,1.540646 -0.407732,1.064445 -0.632361,1.631928 -0.687352,1.761883 -0.961591,2.272445 -2.882184,0.735416 -3.392416,0.07414 -0.149478,-0.24273 -0.372536,-0.383115 -0.623014,-1.248811 z M 72.499936,43.74936 c 0.751681,0.07047 0.775633,0.04456 0.541133,-0.844981 -0.415246,-1.681329 -0.781758,-2.116353 -1.832553,-2.175118 -0.901238,-0.06461 -0.949141,-0.01281 -0.91795,0.784822 0.03899,0.997046 1.130724,2.102708 2.20937,2.235277 z" id="path270" style="stroke-width:0.0352778" sodipodi:nodetypes="ccccccccsscscsccscccscccccscc" />
-  </g>
-</svg> -->
-
-    <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <div class="cnt">
-        <div class="cnt-1"></div>
-        <div class="cnt-2 hide"></div>
-        <button id="btntst" class="btn btn-outline-info">TST</button>
-    </div>
-    <script>
-        let clicked = false;
-        document.querySelector('#btntst').addEventListener('click',(e)=>{
-            if (clicked) {
-                
-            }
-        })
-    </script> -->
-    <!-- data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e -->
-    <!-- data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e -->
-    <div id="carouselExample" class="carousel slide hide">
+    <div id="mi-carousel" class="carousel slide">
         <div class="carousel-inner">
+            <!-- About Me -->
             <div class="carousel-item active" data-my-item="1">
                 <div class="d-flex w-100">
                     <div class="carousel-item-content">
-                        <div id="demo1" class="card mx-auto" style="width: 18rem">
+                        <div id="demo1" class="card mx-auto col-2 my-3">
                             <div class="card-body">
                                 <h5 class="card-title">Card 1</h5>
                                 <p class="card-text">
@@ -79,6 +38,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Projects -->
             <div class="carousel-item" data-my-item="2">
                 <div class="d-flex w-100">
                     <div class="carousel-item-content">
@@ -95,6 +55,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Languages -->
             <div class="carousel-item" data-my-item="3">
                 <div class="d-flex w-100">
                     <div class="carousel-item-content">
@@ -111,68 +72,52 @@
                     </div>
                 </div>
             </div>
+            <!-- Skills -->
+            <div class="carousel-item" data-my-item="4">
+                <div class="d-flex w-100">
+                    <div class="carousel-item-content">
+                        <div id="demo3" class="card mx-auto" style="width: 18rem">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3</h5>
+                                <p class="card-text">
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </p>
+                                <a href="#" class="btn btn-primary" onclick="moveto(3,2)">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact -->
+            <div class="carousel-item" data-my-item="5">
+                <div class="d-flex w-100">
+                    <div class="carousel-item-content">
+                        <div id="demo3" class="card mx-auto" style="width: 18rem">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3</h5>
+                                <p class="card-text">
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </p>
+                                <a href="#" class="btn btn-primary" onclick="moveto(3,2)">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="carousel-control-prev hide" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev hide" type="button" data-bs-target="#mi-carousel" data-bs-slide="prev">
             <span class="custom-carousel-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next hide" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next hide" type="button" data-bs-target="#mi-carousel" data-bs-slide="next">
             <span class="custom-carousel-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div id="nav-tabs" class="hide">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <button class="nav-link active" aria-current="page" data-target="#demo1">Active</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" data-target="#demo2">Link</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" data-target="#demo3">Link</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link disabled">Disabled</button>
-            </li>
-        </ul>
-        <div id="demo1" class="card" style="width: 18rem">
-            <img src="" class="card-img-top" alt="" />
-            <div class="card-body">
-                <h5 class="card-title">Card 1</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div id="demo2" class="card hide" style="width: 18rem">
-            <img src="" class="card-img-top" alt="" />
-            <div class="card-body">
-                <h5 class="card-title">Card 2</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div id="demo3" class="card hide" style="width: 18rem">
-            <img src="" class="card-img-top" alt="" />
-            <div class="card-body">
-                <h5 class="card-title">Card 3</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
     <button id="btn" class="btn btn-secondary hide">Provar</button>
 
-    <script src="./components/NavBar.js"></script>
     <script>
         const mountedNavBar = navbar.mount(document.querySelector('nav-bar'))
     </script>
