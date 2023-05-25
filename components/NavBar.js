@@ -46,7 +46,6 @@ const navbar = Vue.createApp({
                 this.carousel('About Me', 'person-vcard'),
                 this.carousel('Projects', 'briefcase'),
                 this.carousel('Languages', 'globe-americas'),
-                this.carousel('Hard/Soft Skils', 'lightning'),
                 this.carousel('Contact', 'telephone'),
             ]
         }

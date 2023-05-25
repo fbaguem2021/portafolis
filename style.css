@@ -3,6 +3,7 @@
 @import url("./styles/style-test.css");
 @import url("./styles/carousel.css");
 @import url("./styles/medias.css");
+@import url("./styles/cards.css");
 
 :root {
     --header-size: 102px;

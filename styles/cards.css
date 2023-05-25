@@ -1,0 +1,10 @@
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+.img-lnk {
+    width: 32px; height: 32px;
+}
+.cnt-info::after {
+    content: attr(contenido);
+}

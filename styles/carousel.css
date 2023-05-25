@@ -7,6 +7,10 @@
 .carousel-item > .d-flex {
     height: 100%;
 }
+.carousel-item > .carousel-item-content.no-of,
+.carousel-item > .d-flex > .carousel-item-content.no-of {
+    overflow-y: unset !important;
+}
 .carousel-item > .carousel-item-content,
 .carousel-item > .d-flex > .carousel-item-content {
     /* top: 102px;

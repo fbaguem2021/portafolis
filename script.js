@@ -14,6 +14,7 @@ Element.prototype.$ = function(q="") {
     else if (res.length === 1) { return res[0] } 
     else { return res }
 }
+
 function toggleTheme() {
     const body = document.querySelector('body')
     if (body.dataset.bsTheme == 'light') {
@@ -26,5 +27,6 @@ function resizeNav() {
     const navLinksContainer = document.querySelector('.nav-links-container')
     navLinksContainer.style.height = '40px'
     navLinksContainer.style.opacity = '1'
+
     
 }
