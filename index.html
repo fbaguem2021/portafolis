@@ -9,17 +9,19 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./script.js" defer></script>
 
     <script src="./components/NavBar.js"></script>
+    <script src="./js/video/main.js" type="module" defer></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body data-bs-theme="dark" onload="resizeNav()">
     <!-- <button id="btntheme" onclick="toggleTheme()">Toggle Theme</button> -->
     <header>
         <nav-bar></nav-bar>
     </header>
-
-    <div id="mi-carousel" class="carousel slide">
+    <main>
+        <div id="mi-carousel" class="carousel slide">
         <div class="carousel-inner">
             <!-- About Me -->
             <div class="carousel-item active" data-my-item="1">
@@ -40,16 +42,32 @@
             <div class="carousel-item" data-my-item="2">
                 <div class="d-flex w-100">
                     <div class="carousel-item-content">
-                        <h1 style="text-align: center;">Projects</h1>
-                        <div id="demo2" class="card mx-auto col-5">
-                            <div class="card-header">
+                        <h1 style="text-align: center; margin-top: 0;">Projects</h1>
+
+                        <!-- separador -->
+
+                        <div id="demo2" class="card mt-2 mx-auto col-6">
+                            <div class="card-header card-header-flex">
                                 <a href="https://fbaguem2021.github.io/remove-bg/" target="_blank">Background Remover</a>
+                                <div class="card-header-btn-container">
+                                    <a class="btn btn-info ms-1" href="https://fbaguem2021.github.io/remove-bg/" target="_blank">
+                                        <i class="bi bi-controller"></i> Try IT
+                                    </a>
+                                    <button id="video-toggler" class="btn btn-primary me-1"><i class="bi bi-camera-reels"></i> Watch Video</button>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <p class="card-text">
-                                    This is a web application that is capable of removing the background of some images, thanks to the <a href="https://remove.bg">Remove BG</a> API
+                                    This is a web application that is capable of removing the background of some images, 
+                                    thanks to the <a href="https://remove.bg">Remove BG</a> API
                                 </p>
                                 <img src="media/remove-bg.png" alt="" style="width: 100%">
+                            </div>
+                        </div>
+                        <div id="demo2_" class="card mt-2 mx-auto col-6">
+                            <div class="card-header">Broggitecnics</div>
+                            <div class="card-body">
+
                             </div>
                         </div>
                     </div>
@@ -104,6 +122,27 @@
                 </div>
             </div>
         </div>
+        <div class="video-modal floating">
+            <span class="modal-background"></span>
+            <div class="video-content">
+                <button data-my-action="close-modal" class="video-modal-close btn btn-transparent">
+                    <i class="bi bi-x-lg text-black"></i>
+                </button>
+                <!-- <video id="videoBroggi" src="https://www.jnirella.com/media/Video.webm" controls="" width="100%"></video> -->
+                <video id="mi-video" playsinline controls class="move-up not no-full-screen">
+                    <!-- <source src="assets/cancion.mp4" type="video/mp4"/> -->
+                    <source src="https://www.jnirella.com/media/Video.webm" type="video/webm"/>
+                </video>
+                <div class="video-buttons">
+                    <button class="btn btn-small btn-info" data-video-moment="0"><i class="bi bi-play"></i> Presentación</button>
+                    <button class="btn btn-small btn-info" data-video-moment="1"><i class="bi bi-play"></i> Ciclos estudiados</button>
+                    <button class="btn btn-small btn-info" data-video-moment="2"><i class="bi bi-play"></i> </button>
+                    <button class="btn btn-small btn-info" data-video-moment="3"><i class="bi bi-play"></i> </button>
+                    <button class="btn btn-small btn-info" data-video-moment="4"><i class="bi bi-play"></i> </button>
+                    <button class="btn btn-small btn-info" data-video-moment="5"><i class="bi bi-play"></i> </button>
+                </div>
+            </div>
+        </div>
         <button class="carousel-control-prev hide" type="button" data-bs-target="#mi-carousel" data-bs-slide="prev">
             <span class="custom-carousel-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -113,6 +152,8 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    </main>
+    
     <button id="btn" class="btn btn-secondary hide">Provar</button>
 
     <script>

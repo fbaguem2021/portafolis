@@ -8,3 +8,11 @@ h1 {
 .cnt-info::after {
     content: attr(contenido);
 }
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.card-header-btn-container {
+    display: flex;
+    flex-direction: row-reverse;
+}

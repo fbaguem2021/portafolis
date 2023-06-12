@@ -4,7 +4,6 @@
         "media": "svg"
     },
     "material-icon-theme.files.associations": {
-        "*.js": "vue",
-        "script.js": "javascript",
+        "NavBar.js": "vue",
     }
 }

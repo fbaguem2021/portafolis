@@ -33,7 +33,7 @@
         flex-direction: row;
     }
     .navbar-animated > .nav-links-container {
-        height: 0px;
+        height: 40px;
         opacity: 0;
         overflow: hidden;
         transition: height .5s linear, opacity .5s linear;

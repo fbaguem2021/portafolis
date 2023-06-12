@@ -1,0 +1,75 @@
+.video-modal:not(.show) {
+  display: none;
+}
+
+.video-modal {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.modal-background {
+  position: absolute;
+  background-color: white;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.floating > .video-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  --move-x: calc( -50% + 100px );
+  transform: translateX(var(--move-x)) translateY(-50%);
+}
+
+.video-content {
+  opacity: 1;
+  display: flex;
+  width: calc(60% + 200px);
+  flex: 1;
+  border: 1px solid gray;
+}
+
+#mi-video {
+  top: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.no-full-screen button:not(:disabled) {
+  display: none;
+}
+
+.move-up:not(.not) {
+  transform: translateY(-85%);
+}
+
+.video-buttons {
+  width: 100%;
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.video-buttons > button {
+  text-align: start;
+  width: 200px;
+  margin: 10px 0;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  z-index: 10;
+}
+.video-modal-close > i::before {
+  scale: 2;
+}

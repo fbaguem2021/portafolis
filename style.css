@@ -4,6 +4,7 @@
 @import url("./styles/carousel.css");
 @import url("./styles/medias.css");
 @import url("./styles/cards.css");
+@import url("./styles/video.css");
 
 :root {
     --header-size: 102px;
@@ -34,11 +35,6 @@ nav {
 .full-h {
     height: 100%;
 }
-/* .nav-icon {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-21px);
-} */
 .nav-links {
     padding-right: 25px;
     flex-direction: row-reverse;
