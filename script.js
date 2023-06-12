@@ -1,16 +1,3 @@
-// function $(q="") {
-//     const res = document.querySelectorAll(q)
-//     if (res.length === 0) { return null } 
-//     else if (res.length === 1) { return res[0] } 
-//     else { return res }
-// }
-// Element.prototype.$ = function(q="") {
-//     const res = this.querySelectorAll(q)
-//     if (res.length === 0) { return null } 
-//     else if (res.length === 1) { return res[0] } 
-//     else { return res }
-// }
-
 function toggleTheme() {
     const body = document.querySelector('body')
     if (body.dataset.bsTheme == 'light') {
@@ -24,6 +11,21 @@ function resizeNav() {
     // navLinksContainer.style.height = '40px'
     navLinksContainer.style.opacity = '1';
 }
+function manageSpinner() {
+    const animContainer = document.querySelector('.animation-container')
+
+    animContainer.addEventListener('transitionend', (e) => {
+        if (e.target === animContainer) {
+            animContainer.remove()
+        }
+    })
+    
+    const animParent = animContainer.querySelector('.parent')
+    animParent.querySelector('img').addEventListener('animationend', () => {
+        animContainer.style = 'opacity: 0;'
+    })
+    animParent.style = ''
+}
 function loadCardItem(item) {
     const a = document.createElement('a')
     a.setAttribute('type','button')
@@ -35,5 +37,17 @@ function loadCardItem(item) {
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
+}
+var images;
+function deferImages() {
+     images = document.querySelectorAll('img[defer]')
+    images.forEach(img => {
+        img.src = img.dataset.src;
+    })
+}
+function preparePage() {
+    resizeNav();
+    manageSpinner()
+    deferImages()
 }
 // loadCardItem(1)

@@ -9,6 +9,9 @@
     .nav-links > .nav-item > .nav-icon {
         display: none;
     }
+    .nav-icon-row {
+        display: none;
+    }
     .nav-logo {
         position: relative;
         right: 50%;

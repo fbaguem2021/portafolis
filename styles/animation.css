@@ -1,0 +1,70 @@
+.animation-container {
+  top: 0;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: black;
+  transition: opacity 1s linear;
+}
+.animation-container > .parent {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translateY(-50%) translateX(-50%);
+  transition: opacity .5s linear;
+}
+.animation-container > .parent > .circle {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(to right, lightblue, purple) border-box;
+  border-radius: 50em;
+  border: 5px solid transparent;
+}
+.animation-container > .parent > .image {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes rotate-reverse {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.rotate {
+  animation-name: rotate;
+  animation-delay: .5s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.rotate-reverse {
+  animation-name: rotate-reverse;
+  animation-delay: .5s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}

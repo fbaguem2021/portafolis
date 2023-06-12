@@ -5,10 +5,10 @@ const navbar = Vue.createApp({
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <button style="color: yellow;" class="btn btn-transparent nav-logo"><i class="bi bi-sun-fill"></i></button>
+            <button style="color: yellow; cursor: initial;" class="btn btn-transparent nav-logo"><img class="nav-icon" src="./media/fb-logo2-white.svg" alt="" width="32" height="32"></button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-animated mb-2 mb-lg-0 nav-links">
-                    <li class="nav-item" style="height: 46px;">
+                    <li class="nav-item nav-icon-row" style="height: 46px;">
                         <img class="nav-icon" src="./media/fb-logo2-white.svg" alt="" width="32" height="32">
                     </li>
                     <div class="nav-links-container">
