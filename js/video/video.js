@@ -1,49 +1,46 @@
 export class Video {
-    video;
+    videoElement;
     static create(q) {
-        const video = $(q);
-        // console.log(video);
-        // console.log(Object.getPrototypeOf(video));
-        if (video && video instanceof HTMLVideoElement) {
-            return new Video(video);
+        const videoElement = $(q);
+        if (videoElement && videoElement instanceof HTMLVideoElement) {
+            return new Video(videoElement);
         }
         else {
-            console.warn('The', q, 'selector did not return a HTMLVideoElement object');
             return null;
         }
     }
-    constructor(video) {
-        this.video = video;
+    constructor(videoElement) {
+        this.videoElement = videoElement;
     }
     PlayPause() {
-        if (this.video.paused) {
-            this.video.play();
+        if (this.videoElement.paused) {
+            this.videoElement.play();
         }
         else {
-            this.video.pause();
+            this.videoElement.pause();
         }
     }
     Stop() {
-        this.video.pause();
-        this.video.currentTime = 0;
+        this.videoElement.pause();
+        this.videoElement.currentTime = 0;
     }
     Advance() {
-        this.video.currentTime += 10;
+        this.videoElement.currentTime += 10;
     }
     Rewind() {
-        const curTime = this.video.currentTime;
+        const curTime = this.videoElement.currentTime;
         if (curTime < 10) {
-            this.video.currentTime = 0;
+            this.videoElement.currentTime = 0;
         }
         else if (curTime > 10) {
-            this.video.currentTime -= 10;
+            this.videoElement.currentTime -= 10;
         }
     }
     goto(identifyer) {
         const moments = [
             0, seconds(42, 7), seconds(45, 13), seconds(28, 25), seconds(6, 33), seconds(55, 38)
         ];
-        this.video.currentTime = moments[identifyer];
-        this.video.play();
+        this.videoElement.currentTime = moments[identifyer];
+        this.videoElement.play();
     }
 }

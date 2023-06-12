@@ -19,6 +19,10 @@ body[data-bs-theme="light"] {
 html, body {
     height: 100%;
 }
+main {
+    height: calc(100% - 102px);
+    top: 102px;
+}
 header {
     height: var(--header-size);
 }
@@ -30,7 +34,8 @@ nav {
     background-image: url("./fb-logo2.svg");
 }
 .carousel {
-    height: calc(100% - var(--header-size))
+    height: 100%;
+    /* height: calc(100% - var(--header-size)) */
 }
 .full-h {
     height: 100%;
@@ -50,4 +55,12 @@ nav {
 }
 .card.show {
     display: flex;
+}
+h3.center-horizontal {
+    text-align: center;
+}
+iframe.center-horizontal {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
 }

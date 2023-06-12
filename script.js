@@ -36,4 +36,4 @@ function loadCardItem(item) {
     a.click()
     document.body.removeChild(a)
 }
-loadCardItem(1)
+// loadCardItem(1)

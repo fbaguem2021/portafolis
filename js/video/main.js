@@ -1,31 +1,25 @@
 import { Video } from './video.js';
 const video = Video.create('#mi-video');
+
+const modal = document.querySelector('.video-modal')
+
 const toggler = document.querySelector('#video-toggler')
-const closer  = document.querySelector('.video-modal-close')
 const buttons = document.querySelectorAll('.video-buttons > button');
 
-video.addEventListener("loadedmetadata", function() {
-    // Customize video controls to hide fullscreen button
-    var controls = video.controls;
-    controls.setAttribute("disablePictureInPicture", true);
-    controls.removeAttribute("mozRequestFullScreen");
-
-    // Manually handle the fullscreen functionality
-    controls.addEventListener("click", function() {
-        if (video.mozRequestFullScreen) {
-            video.mozRequestFullScreen();
-        }
-    });
-});
-
-toggler?.addEventListener('click',() => {
-    let modal = document.querySelector('.video-modal')
-    modal.classList.add('show')
+modal?.querySelector('.modal-background').addEventListener('click', () => {
+    modal.style.opacity = 0
+    setTimeout(()=>{
+        // modal.classList.add('hide')
+        modal.setAttribute('class', 'video-modal floating hide')
+    },500)
 })
-closer?.addEventListener('click', () => {
-    let modal = document.querySelector('.video-modal')
-    modal.classList.remove('show')
-    video.Stop()
+
+toggler?.addEventListener('click',async() => {
+    // modal.classList.remove('hide')
+    modal.setAttribute('class', 'video-modal floating')
+    setTimeout(() => {
+        modal.style.opacity = 1
+    },20)
 })
 buttons?.forEach(btn => {
     if (btn instanceof HTMLElement) {
@@ -35,4 +29,4 @@ buttons?.forEach(btn => {
         });
     }
 });
-toggler.click()
+// toggler.click()

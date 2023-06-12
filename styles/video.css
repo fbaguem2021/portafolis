@@ -1,5 +1,5 @@
-.video-modal:not(.show) {
-  display: none;
+.video-modal.hide {
+  opacity: 0;
 }
 
 .video-modal {
@@ -8,6 +8,8 @@
   width: 100%;
   height: 100%;
   border: 1px solid black;
+  opacity: 1;
+  transition: opacity .5s linear ;
 }
 
 .modal-background {
@@ -51,6 +53,7 @@
 }
 
 .video-buttons {
+  position: relative;
   width: 100%;
   display: flex;
   flex: 2;
@@ -59,17 +62,8 @@
 }
 
 .video-buttons > button {
+  position: relative;
   text-align: start;
   width: 200px;
   margin: 10px 0;
-}
-
-.video-modal-close {
-  position: absolute;
-  top: 0;
-  right: 0px;
-  z-index: 10;
-}
-.video-modal-close > i::before {
-  scale: 2;
 }
