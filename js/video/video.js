@@ -11,6 +11,25 @@ export class Video {
     }
     constructor(videoElement) {
         this.videoElement = videoElement;
+        this.setStopMoments()
+    }
+    setStopMoments() {
+        this.videoElement.addEventListener("timeupdate", function(e) {
+            const video = e.target;
+            switch (true){
+                case (video.currentTime >= 10):
+                case (video.currentTime >= 20):
+                case (video.currentTime >= 30):
+                    video.pause()
+                break;
+            }
+            // if( video.currentTime === 30 ||
+            //     video.currentTime === 20 ||
+            //     video.currentTime === 10
+            //     ) {
+            //     video.pause();
+            // } 
+        });
     }
     PlayPause() {
         if (this.videoElement.paused) {

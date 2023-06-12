@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Francesc's portfolio to discober what he has learned through the year and the projects that he has done">
+    <meta name="keywords" content="francesc bague, fbaguem2021, web development, portfolio, html, css, javascript, kotlin, c#, java, laravel">
     <title>Portafolis</title>
     <link rel="shortcut icon" href="./media/fb-logo2.svg" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
@@ -14,6 +16,17 @@
     <script src="./js/video/main.js" type="module" defer></script>
     <script src="./js/utilities.js"></script>
     <script src="./script.js" defer></script>
+
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/remove-bg.webp" as="image">
+
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/langs/java.webp" as="image">
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/langs/c-sh.webp" as="image">
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/langs/kotlin.webp" as="image">
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/langs/js.webp" as="image">
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/langs/php.webp" as="image">
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/langs/laravel.webp" as="image">
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/github.webp" as="image">
+    <link rel="preload" href="https://fbaguem2021.github.io/portafolis/media/linkedin.webp" as="image">
 </head>
 <body data-bs-theme="dark" onload="preparePage()">
     <!-- <button id="btntheme" onclick="toggleTheme()">Toggle Theme</button> -->
@@ -28,130 +41,146 @@
     </div>
     <main>
         <div id="mi-carousel" class="carousel slide">
-        <div class="carousel-inner">
-            <!-- About Me -->
-            <div class="carousel-item active" data-my-item="1">
-                <div class="d-flex w-100">
-                    <div class="carousel-item-content " >
-                        <h1 style="text-align: center; margin-top: 100px;">About Me</h1>
-                        <div class="card mx-auto col-5 my-3">
-                            <div class="card-body">
-                                Hello, My name is Francesc Bagué, and i'm a <i>Code Developper</i> specialized in <b>Web</b> and <b>Android</b> applications
-                                I enjoy spending time reading, listening to music and playing videogames
-                                I also, sometimes like to search and learn new coding skills to increase my knowledge
-                            </div>
-                        </div>
-                        <div class="card mx-auto col-5 my-3">
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Projects -->
-            <div class="carousel-item" data-my-item="2">
-                <div class="d-flex w-100">
-                    <div class="carousel-item-content">
-                        <h1 style="text-align: center; margin-top: 0;">Projects</h1>
-
-                        <!-- separador -->
-
-                        <div id="demo2" class="card mt-2 mx-auto col-6">
-                            <div class="card-header card-header-flex">
-                                <a href="https://fbaguem2021.github.io/remove-bg/" target="_blank">Background Remover</a>
-                                <div class="card-header-btn-container">
-                                    <a class="btn btn-info ms-1" href="https://fbaguem2021.github.io/remove-bg/" target="_blank">
-                                        <i class="bi bi-controller"></i> Try IT
-                                    </a>
-                                    <button id="video-toggler" class="btn btn-primary me-1"><i class="bi bi-camera-reels"></i> Watch Video</button>
+            <div class="carousel-inner">
+                <!-- About Me -->
+                <div class="carousel-item active" data-my-item="1">
+                    <div class="d-flex w-100">
+                        <div class="carousel-item-content " >
+                            <h1 style="text-align: center; margin-top: 100px;">About Me</h1>
+                            <div class="card mx-auto col-5 my-3">
+                                <div class="card-body">
+                                    Hello, My name is Francesc Bagué<br>
+                                    I'm a <i>Code Developper</i> specialized in <b>Web</b> and <b>Android</b> applications
+                                    Currently I'm focused in completing my studies, and finding an Internship programm. 
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    This is a web application that is capable of removing the background of some images, 
-                                    thanks to the <a href="https://remove.bg">Remove BG</a> API
-                                </p>
-                                <img defer data-src="media/remove-bg.webp" alt="remove-bg.png" style="width: 100%">
+                            <div class="card mx-auto col-5 my-3">
+                                <div class="card-body">
+                                    Since I was little, I've allways been interested in tecnology and how did the computers and it's apps worked, so, right after I ended my studies in the High School, I had a preety good Idea about what I wanted to study
+                                </div>
                             </div>
-                        </div>
-                        <div id="demo2_" class="card mt-2 mx-auto col-6">
-                            <div class="card-header">Broggitecnics</div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    This application was specifically designed for the <strong>Moises Broggi</strong> High School<br>
-                                    It's objective is to simulate an application used by an emergency service, so that the students can 
-                                    begin to gain experience on the use of this king of applications
-                                    What I am showing here, are two different modules from the application the my team and I made
-                                </p>
-                                <!-- <h3 class="center-horizontal mt-2">Register and Login</h3> -->
-                                <!-- <iframe src="https://www.youtube.com/embed/PPV8G1RAUmg" class="center-horizontal"
-                                width="560" height="315" title="YouTube video player"></iframe> -->
-                                <!-- <h3 class="center-horizontal mt-2">Expedient Management</h3> -->
-                                <!-- <iframe src="https://www.youtube.com/embed/c69tfEF4WdU?controls=0" class="center-horizontal"
-                                width="560" height="315" title="YouTube video player"allowfullscreen></iframe> -->
+                            <div class="card mx-auto col-5 my-3">
+                                <div class="card-body">
+                                    Throughout my time in the CEP, I've been capable of learning very different cofing languages and frameworks that, I have found very interesting.<br>
+                                    On the first two years, I sudied on how to proggram applications for computers and android devices,
+                                    and on this third year, I've learnt how to make web applications
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Languages -->
-            <div class="carousel-item" data-my-item="3">
-                <div class="d-flex w-100">
-                    <div class="carousel-item-content">
-                        <h1 style="text-align: center; margin-top: 0;">Languages</h1>
-                        <div id="demo3" class="card mx-auto col-6" >
-                            <div class="card-header">Coding Languages</div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Through the three years that i've been stufing at the CEP on barcelona, I've learned different coding languages and framewotks,:
-                                </p>
-                                <div class="container">
-                                    <div class="row row-cols-3">
-                                        <img defer alt="lang.png" data-src="media/langs/java.webp"     class="col px-4 py-4">
-                                        <img defer alt="lang.png" data-src="media/langs/c-sh.webp"     class="col px-4 py-4">
-                                        <img defer alt="lang.png" data-src="media/langs/kotlin.webp"   class="col px-4 py-4">
-                                        <img defer alt="lang.png" data-src="media/langs/js.webp"       class="col px-4 py-4">
-                                        <img defer alt="lang.png" data-src="media/langs/php.webp"      class="col px-4 py-4">
-                                        <img defer alt="lang.png" data-src="media/langs/laravel.webp" class="col px-4 py-4">
+                <!-- Projects -->
+                <div class="carousel-item" data-my-item="2">
+                    <div class="d-flex w-100">
+                        <div class="carousel-item-content">
+                            <h1 style="text-align: center; margin-top: 0;">Projects</h1>
+
+                            <!-- separador -->
+
+                            <div id="demo2" class="card mt-2 mx-auto col-6">
+                                <div class="card-header card-header-flex">
+                                    <a href="https://fbaguem2021.github.io/remove-bg/" target="_blank">Background Remover</a>
+                                    <div class="card-header-btn-container">
+                                        <a class="btn btn-info ms-1" href="https://fbaguem2021.github.io/remove-bg/" target="_blank">
+                                            <i class="bi bi-controller"></i> Try IT
+                                        </a>
+                                        <!-- <button id="video-toggler" class="btn btn-primary me-1"><i class="bi bi-camera-reels"></i> Watch Video</button> -->
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        This is a web application that is capable of removing the background of some images, 
+                                        thanks to the <a href="https://remove.bg">Remove BG</a> API
+                                    </p>
+                                    <img defer data-src="https://fbaguem2021.github.io/portafolis/media/remove-bg.webp" alt="remove-bg.png" style="width: 100%">
+                                </div>
+                            </div>
+                            <!-- <div id="demo2_" class="card mt-2 mx-auto col-6">
+                                <div class="card-header">Broggitecnics</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        This application was specifically designed for the <strong>Moises Broggi</strong> High School<br>
+                                        It's objective is to simulate an application used by an emergency service, so that the students can 
+                                        begin to gain experience on the use of this king of applications
+                                        What I am showing here, are two different modules from the application the my team and I made
+                                    </p>
+                                    <h3 class="center-horizontal mt-2">Register and Login</h3>
+                                    <iframe src="https://www.youtube.com/embed/PPV8G1RAUmg" class="center-horizontal"
+                                    width="560" height="315" title="YouTube video player"></iframe>
+                                    <h3 class="center-horizontal mt-2">Expedient Management</h3>
+                                    <iframe src="https://www.youtube.com/embed/c69tfEF4WdU?controls=0" class="center-horizontal"
+                                    width="560" height="315" title="YouTube video player"allowfullscreen></iframe>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Languages -->
+                <div class="carousel-item" data-my-item="3">
+                    <div class="d-flex w-100">
+                        <div class="carousel-item-content">
+                            <h1 style="text-align: center; margin-top: 0;">Languages</h1>
+                            <div id="demo3" class="card mx-auto col-6" >
+                                <div class="card-header">Coding Languages</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Through the three years that i've been stufing at the CEP on barcelona, I've learned different coding languages and framewotks,:
+                                    </p>
+                                    <div class="container">
+                                        <div class="row row-cols-3">
+                                            <img defer alt="lang.png" data-src="https://fbaguem2021.github.io/portafolis/media/langs/java.webp"      class="col px-4 py-4">
+                                            <img defer alt="lang.png" data-src="https://fbaguem2021.github.io/portafolis/media/langs/c-sh.webp"      class="col px-4 py-4">
+                                            <img defer alt="lang.png" data-src="https://fbaguem2021.github.io/portafolis/media/langs/kotlin.webp"    class="col px-4 py-4">
+                                            <img defer alt="lang.png" data-src="https://fbaguem2021.github.io/portafolis/media/langs/js.webp"        class="col px-4 py-4">
+                                            <img defer alt="lang.png" data-src="https://fbaguem2021.github.io/portafolis/media/langs/php.webp"       class="col px-4 py-4">
+                                            <img defer alt="lang.png" data-src="https://fbaguem2021.github.io/portafolis/media/langs/laravel.webp"   class="col px-4 py-4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Contact -->
-            <div class="carousel-item" data-my-item="4">
-                <div class="d-flex w-100">
-                    <div class="carousel-item-content">
-                            <h1 style="text-align: center;">Contact</h1>
-                        <div id="demo3" class="card mx-auto col-5">
-                            <div class="card-header">Contact Info</div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    If you want to contact me, you can tray using the following:
-                                </p>
-                                <div class="cnt-info" contenido="+34633576489">Numero: </div>
-                                <div>Email: <a href="mailto:francesc.bague@gmail.com" class="cnt-info" contenido="francesc.bague@gmail.com"></a></div>
+                <!-- Contact -->
+                <div class="carousel-item" data-my-item="4">
+                    <div class="d-flex w-100">
+                        <div class="carousel-item-content">
+                                <h1 style="text-align: center;">Contact</h1>
+                            <div id="demo3" class="card mx-auto col-5">
+                                <div class="card-header">Contact Info</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        If you want to contact me, you can tray using the following:
+                                    </p>
+                                    <div class="cnt-info" contenido="+34633576489">Numero: </div>
+                                    <div>Email: <a href="mailto:francesc.bague@gmail.com" class="cnt-info" contenido="francesc.bague@gmail.com"></a></div>
 
-                                <a href="https://github.com/FrancescBagueMarti">
-                                    <img defer data-src="media/github.webp" class="img-lnk"> Github: 
-                                </a>
-                                <br>
-                                <a href="https://es.linkedin.com/in/francesc-bagu%C3%A9-mart%C3%AD-7b0396225?trk=people_directory&original_referer=https%3A%2F%2Fwww.google.com%2F">
-                                    <img defer data-src="media/linkedin.webp" class="img-lnk"> Linkedin
-                                </a>
+                                    <a href="https://github.com/FrancescBagueMarti">
+                                        <img defer data-src="https://fbaguem2021.github.io/portafolis/media/github.webp" class="img-lnk"> Github: 
+                                    </a>
+                                    <br>
+                                    <a href="https://es.linkedin.com/in/francesc-bagu%C3%A9-mart%C3%AD-7b0396225?trk=people_directory&original_referer=https%3A%2F%2Fwww.google.com%2F">
+                                        <img defer data-src="https://fbaguem2021.github.io/portafolis/media/linkedin.webp" class="img-lnk"> Linkedin
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <button class="carousel-control-prev hide" type="button" data-bs-target="#mi-carousel" data-bs-slide="prev">
+                <span class="custom-carousel-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next hide" type="button" data-bs-target="#mi-carousel" data-bs-slide="next">
+                <span class="custom-carousel-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
         <div class="video-modal floating hide">
             <span class="modal-background"></span>
             <div class="video-content">
-                
+                <div class="video-controls"></div>
                 <!-- <video id="videoBroggi" src="https://www.jnirella.com/media/Video.webm" controls="" width="100%"></video> -->
                 <video id="mi-video" playsinline controls class="move-up not no-full-screen">
                     <!-- <source src="assets/cancion.mp4" type="video/mp4"/> -->
@@ -160,25 +189,16 @@
                 <div>
                     
                 </div>
-                <div class="video-buttons">
+                <!-- <div class="video-buttons">
                     <button class="btn btn-small btn-info" data-video-moment="0"><i class="bi bi-play"></i> Presentación</button>
                     <button class="btn btn-small btn-info" data-video-moment="1"><i class="bi bi-play"></i> Ciclos estudiados</button>
                     <button class="btn btn-small btn-info" data-video-moment="2"><i class="bi bi-play"></i> </button>
                     <button class="btn btn-small btn-info" data-video-moment="3"><i class="bi bi-play"></i> </button>
                     <button class="btn btn-small btn-info" data-video-moment="4"><i class="bi bi-play"></i> </button>
                     <button class="btn btn-small btn-info" data-video-moment="5"><i class="bi bi-play"></i> </button>
-                </div>
+                </div> -->
             </div>
         </div>
-        <button class="carousel-control-prev hide" type="button" data-bs-target="#mi-carousel" data-bs-slide="prev">
-            <span class="custom-carousel-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next hide" type="button" data-bs-target="#mi-carousel" data-bs-slide="next">
-            <span class="custom-carousel-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
     </main>
     
     <button id="btn" class="btn btn-secondary hide">Provar</button>
