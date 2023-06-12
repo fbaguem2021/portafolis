@@ -15,3 +15,6 @@ Element.prototype.$ = function (q) {
     else
         return res;
 };
+function seconds(seconds, minutes) {
+    return seconds + (minutes * 60);
+}

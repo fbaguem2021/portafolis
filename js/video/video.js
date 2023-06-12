@@ -37,8 +37,15 @@ export class Video {
         }
     }
     goto(identifyer) {
+        // Array con los valores de las diferentes posiciones a las que puedes ir en el video
+        // los valores que se han de guardar, solo pueden ser segundos
         const moments = [
-            0, seconds(42, 7), seconds(45, 13), seconds(28, 25), seconds(6, 33), seconds(55, 38)
+            0,
+            seconds(42, 7),
+            seconds(45, 13), 
+            seconds(28, 25), 
+            seconds(6, 33), 
+            seconds(55, 38)
         ];
         this.videoElement.currentTime = moments[identifyer];
         this.videoElement.play();

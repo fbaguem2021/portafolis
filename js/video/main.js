@@ -11,9 +11,9 @@ modal?.querySelector('.modal-background').addEventListener('click', () => {
     setTimeout(()=>{
         // modal.classList.add('hide')
         modal.setAttribute('class', 'video-modal floating hide')
+        video.Stop();
     },500)
 })
-
 toggler?.addEventListener('click',async() => {
     // modal.classList.remove('hide')
     modal.setAttribute('class', 'video-modal floating')
